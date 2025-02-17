@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huistaken Huize Goed Geluk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        .task-container, .schedule-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .task, .week {
+            background: #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Huistaken Huize Goed Geluk</h1>
+        <p>Druk op de knop om de taken van deze week te onthullen!</p>
+        <button onclick="revealTasks()">Onthullen</button>
+        
+        <div id="task-container" class="task-container">
+            <div class="task">
+                <img src="Abbi (1).png" alt="Abbi" class="profile-img">
+                <p><strong>Abbi:</strong> Badkamer + trap naar boven</p>
+            </div>
+            <div class="task">
+                <img src="Jansma (1).png" alt="Jansma" class="profile-img">
+                <p><strong>Jansma:</strong> GK + wc en trap</p>
+            </div>
+            <div class="task">
+                <img src="Tony (1).png" alt="Tony" class="profile-img">
+                <p><strong>Tony:</strong> Keuken</p>
+            </div>
+            <p><em>De taken roteren elke week.</em></p>
+        </div>
+        
+        <div id="schedule-container" class="schedule-container">
+            <h2>Aankomende 8 weken</h2>
+            <div class="week"><strong>Week 1:</strong> Abbi - Badkamer | Jansma - GK | Tony - Keuken</div>
+            <div class="week"><strong>Week 2:</strong> Jansma - Badkamer | Tony - GK | Abbi - Keuken</div>
+            <div class="week"><strong>Week 3:</strong> Tony - Badkamer | Abbi - GK | Jansma - Keuken</div>
+            <div class="week"><strong>Week 4:</strong> Abbi - Badkamer | Jansma - GK | Tony - Keuken</div>
+            <div class="week"><strong>Week 5:</strong> Jansma - Badkamer | Tony - GK | Abbi - Keuken</div>
+            <div class="week"><strong>Week 6:</strong> Tony - Badkamer | Abbi - GK | Jansma - Keuken</div>
+            <div class="week"><strong>Week 7:</strong> Abbi - Badkamer | Jansma - GK | Tony - Keuken</div>
+            <div class="week"><strong>Week 8:</strong> Jansma - Badkamer | Tony - GK | Abbi - Keuken</div>
+        </div>
+    </div>
+
+    <script>
+        function revealTasks() {
+            document.getElementById('task-container').style.display = 'block';
+            document.getElementById('schedule-container').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
